@@ -14,8 +14,7 @@ local function play_or_toggle()
 		if Menu.i == Menu.selected_i then
 			if Menu.selected:isPlaying() then
 				Menu.selected:pause()
-			end
-			if Menu.selected:isPaused() then
+			elseif Menu.selected:isPaused() then
 				Menu.selected:resume()
 			end
 			return
